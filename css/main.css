@@ -276,7 +276,7 @@ header .fa-angles-down {
 
 .team {
 	position: relative;
-	background-image: url(img/team/team/job-g94665544b_1920.jpg);
+	background-image: url(../img/team/team/job-g94665544b_1920.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	z-index: 0;
@@ -330,7 +330,7 @@ header .fa-angles-down {
 
 .contact {
 	position: relative;
-	background-image: url(img/skyscrapers-g64f831085_1920.jpg);
+	background-image: url(../img/skyscrapers-g64f831085_1920.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	z-index: 0;
