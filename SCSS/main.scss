@@ -1,0 +1,374 @@
+@use './colors' as main-colors;
+@use'./animation' as animation;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-padding-top: 81.6px;
+}
+
+body {
+	font-family: 'Quicksand', sans-serif;
+	background-color: rgb(132, 88, 88);
+}
+
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+
+.section-title {
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.underline {
+	margin: 0 auto;
+	width: 80px;
+	height: 4px;
+	background-color: main-colors.$first-color;
+	margin-bottom: 30px;
+}
+
+.red-text {
+	color: main-colors.$second-color;
+}
+
+nav {
+	z-index: 1;
+	transition: background-color 0.6s;
+	.nav-link {
+		color: main-colors.$second-color;
+		text-transform: uppercase;
+	}
+
+	.nav-link:hover {
+		color: main-colors.$first-color;
+	}
+
+	.navbar-brand {
+		color: main-colors.$white-color;
+	}
+	.navbar-nav .nav-link.active {
+		color: main-colors.$first-color;
+		font-weight: bold;
+	}
+	.fa-bars {
+		padding: 10px;
+		color: main-colors.$second-color;
+	}
+}
+
+header {
+	color: main-colors.$white-color;
+	h1 {
+		font-size: 35px;
+	}
+	p {
+		text-transform: uppercase;
+		font-size: 20px;
+	}
+	.header-img {
+		position: relative;
+		height: 100vh;
+		background-image: url(../img/compass-g3e09b59c8_640.jpg);
+		background-position: center;
+		background-size: cover;
+		background-attachment: fixed;
+		z-index: 0;
+	}
+	.header-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.7);
+		z-index: -10;
+	}
+	.header-text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		height: 100vh;
+		z-index: 10;
+		text-align: center;
+		padding: 10px;
+	}
+	.btn-outline-light {
+		text-transform: uppercase;
+	}
+	.fa-angles-down {
+		position: absolute;
+		font-size: 40px;
+		left: 50%;
+		top: 95%;
+		transform: translate(-50%, -50%);
+		color: main-colors.$white-color;
+	}
+}
+
+.aboutUs {
+	background-color: rgb(184, 127, 127);
+	color: main-colors.$first-color;
+
+	i {
+		margin-top: 20px;
+		font-size: 50px;
+	}
+	.aboutUs-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	.aboutUs-card-text {
+		font-size: 15px;
+	}
+
+	// .aboutUs-hover {
+	// 	transition: color 0.4s;
+	// }
+	.aboutUs-hover:hover {
+		color: main-colors.$white-color;
+	}
+}
+
+.about-us-img {
+	position: relative;
+	background-image: url(../img/technology-small.jpg);
+	background-position: center;
+	background-size: cover;
+	z-index: 0;
+	color: main-colors.$white-color;
+
+	.about-us-img-shadow {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: -1;
+	}
+	.about-us-img-text {
+		padding-bottom: 50px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+	.aboutUs-image-card-title {
+		font-size: 22px;
+		text-transform: uppercase;
+	}
+	.aboutUs-image-card-text {
+		font-size: 15px;
+		padding-bottom: 20px;
+	}
+	.about-us-icon {
+		font-size: 35px;
+	}
+	.about-us-img-item {
+		margin: 10px 0;
+	}
+}
+
+.portfolio {
+	background-color: rgb(200, 119, 119);
+	.carousel-item {
+		position: relative;
+		height: 600px;
+	}
+	.carousel-caption {
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 220px;
+		padding: 40px 0;
+		background-color: rgba(0, 0, 0, 0.6);
+	}
+	.carousel-indicators {
+		padding-bottom: 20px;
+	}
+	.card-img-top {
+		height: 25vh;
+	}
+	.card-body {
+		text-align: center;
+	}
+}
+
+.pricing {
+	background-color: rgb(214, 120, 120);
+	.pricing-box {
+		padding: 30px;
+		margin: 20px 10px;
+		background-color: rgb(216, 145, 145);
+		box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+		transition: transform 0.3s;
+		h3 {
+			color: main-colors.$first-color;
+		}
+		span {
+			font-weight: bold;
+		}
+		i {
+			padding: 0 5px;
+			font-size: 24px;
+		}
+		button {
+			padding: 10px 20px;
+		}
+		.price-tag {
+			font-size: 30px;
+			font-weight: bold;
+		}
+	}
+	.pricing-box:hover {
+		transform: scale(1.08);
+	}
+	.pricing-info {
+		margin-top: 30px;
+		a {
+			text-decoration: none;
+		}
+	}
+}
+
+.team {
+	position: relative;
+	background-image: url(/img/team/team/job-g94665544b_1920.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+	.team-img-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.4);
+		z-index: -5;
+	}
+	h2 {
+		color: main-colors.$white-color;
+	}
+	.card {
+		transition: 0.3s;
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+	}
+	.card:hover {
+		transform: scale(0.9);
+	}
+	.card-title {
+		margin-bottom: 20px;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+.achievements {
+	background-color: rgb(173, 105, 105);
+	i {
+		padding: 10px;
+		font-size: 50px;
+		color: rgb(169, 99, 99);
+		text-shadow: 0 0 7px black;
+	}
+	.achievements-list {
+		padding: 20px;
+	}
+	.achievements-number {
+		font-size: 25px;
+	}
+	.achievements-text {
+		font-size: 20px;
+	}
+}
+
+.contact {
+	position: relative;
+	background-image: url(/img/skyscrapers-g64f831085_1920.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+	.contact-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -5;
+	}
+	.section-title {
+		color: whitesmoke;
+	}
+	.contact-item {
+		color: rgb(253, 217, 217);
+		h3 {
+			font-size: 33px;
+			letter-spacing: 2px;
+		}
+		p {
+			font-size: 20px;
+		}
+		.social-media {
+			font-size: 50px;
+			padding: 10px;
+			a {
+				color: rgb(195, 154, 154);
+				transition: 0.3s;
+			}
+			a:hover {
+				color: wheat;
+			}
+		}
+	}
+}
+
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 38px;
+		}
+		p {
+			text-transform: uppercase;
+			font-size: 16px;
+		}
+	}
+}
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 45px;
+		}
+		p {
+			font-size: 22px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+		header {
+			.header-img {
+				background-image: url(../img/compass-g726b66079_1920.jpg);
+			}
+		}
+	}
+
+	@media (min-width: 992px) {
+		html {
+			scroll-padding-top: 80px;
+		}
+		header {
+			.about-us-img {
+				background-image: url(../img/technology-large.jpg);
+			}
+		}
+		.pricing {
+			.pricing-info {
+				font-size: 20px;
+			}
+		}
+	}
+}
