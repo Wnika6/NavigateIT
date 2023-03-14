@@ -376,6 +376,9 @@ header .fa-angles-down {
 		text-transform: uppercase;
 		font-size: 16px;
 	}
+	header .header-img {
+		background-image: url(../img/compass-g3e09b59c8_640.jpg);
+	}
 }
 @media (min-width: 768px) {
 	header h1 {
